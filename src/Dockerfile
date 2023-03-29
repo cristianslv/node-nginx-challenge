@@ -9,6 +9,4 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-EXPOSE 3000
-
-ENTRYPOINT [ "/bin/sh", "-c", "dockerize -wait tcp://db:3306 -timeout 20s && npm start" ]
+ENTRYPOINT [ "/bin/sh", "-c", "dockerize -wait tcp://db:3306 -timeout 20s && npm install && npm start" ]
