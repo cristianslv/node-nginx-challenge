@@ -20,3 +20,4 @@ Node-Nginx challenge created by Fullcycle.
 ## Challange accepted
 
 `docker-compose up -d`
+`curl http://localhost`
